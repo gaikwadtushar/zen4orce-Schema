@@ -1,0 +1,31 @@
+<apex:page controller="mockUpHandler" showHeader="false" sidebar="false">
+    <div>
+	<apex:form >
+ 			<apex:pageblock >
+                
+				<div>
+                <font color="red">*All available DataTypes and their Mandatory feilds</font>
+                <apex:pageblocksection >
+                <apex:pageblocktable value="{!records}" var="r" align="center">
+	               	 <apex:repeat value="{!selectedFields}" var="r1">
+                		<apex:column value="{!r[r1]}"/>
+	   	             </apex:repeat>
+                </apex:pageblocktable>
+                </apex:pageblocksection>
+       	 	    </div>  
+        	<div>
+            	<apex:selectList id="obj" size="1" value="{!selectedObj}" label="Select Object">
+    	     		<!--<apex:actionSupport event="onchange" action="{!showFields}" reRender="fieldOptions" />-->
+        	    	<apex:selectOptions value="{!objects}"/>
+        		</apex:selectList>
+        	</div> 
+        	
+            <div>
+             <!--   <apex:commandButton value="Download CSV" action="{!($Resource.Downloadsampleformat)}"  />-->
+                <label for="a">Upload CSV</label>
+                <input id="a" name="a" type="file" />
+        </div>
+        </apex:pageblock>   	
+        </apex:form>
+        </div>
+</apex:page>
