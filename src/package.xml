@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>mockUpHandler</members>
+        <members>CustomSchemaBuilder</members>
+        <members>FileUploader</members>
+        <members>FileUploaderTest</members>
+        <members>MetadataService</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>mockUpscreen</members>
+        <members>csvuploadVF</members>
         <name>ApexPage</name>
+    </types>
+    <types>
+        <members>CSVO__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>CSVO__c-CSVObject Layout</members>
+        <members>FieldTypeDetails__mdt-FieldTypeDetails Layout</members>
+        <members>MandatoryColumns_FiledTypeWise__mdt-MandatoryColumns_FiledTypeWise Layout</members>
+        <name>Layout</name>
     </types>
     <version>23.0</version>
 </Package>
